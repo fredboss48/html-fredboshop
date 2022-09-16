@@ -1,0 +1,217 @@
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #1695DA;
+   
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.title-box {
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    padding: 50px;
+    top: 100px;
+    box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, .2) ;
+}
+header h1 {
+    font-size: 80px;
+    text-align: center;
+}
+header p {
+    font-size: 25px;
+    text-align: center;
+}
+header h1 , header p , li {
+    font-family: 'Keania One', cursive;
+}
+
+/* slider */
+.slide {
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    flex-direction: row;
+    width: calc(500px * 4);
+    height: 500px;
+    animation: glisse 15s infinite ease;
+}
+.slide{
+    opacity: 0.5;
+}
+
+
+@keyframes glisse {
+
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0px);
+    }
+    33%{
+    transform: translateX(-500px);
+    }
+    
+    66%{
+        transform: translateX(-500px);
+    }
+   
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* navigation menu */
+
+.section-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50px);   
+}
+
+nav.menu {
+    width: calc(500px * 4);
+}
+
+nav.menu ul {
+    display: flex;
+ 
+}
+
+nav.menu ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s all;
+}
+
+nav.menu ul li:hover {
+    transform: scale(0.9);
+    transition: 0.3s all;
+}
+nav.menu ul li a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+.nav-item {
+    height: 300px;
+    flex: 1;
+}
+.nav-item {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.pizza {
+    background: url(../Nouveau\ dossier/pizza2.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.salade {
+    background: url(../Nouveau\ dossier/salade2.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.burger {
+    background: url(../Nouveau\ dossier/burger3.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
+.boisson {
+    background: url(../Nouveau\ dossier/jus2.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* section plats */
+.item {
+    background-color: white;
+    margin: 20px;
+   display: flex;
+   cursor: pointer;
+   transition: 0.3s all;
+   width: 60%;
+   height: 215px;
+}
+
+.item:hover {
+    transition: 0.3s all;
+    box-shadow: -8px 8px 2px 1px rgba(0, 0, 0, .3) ;
+    transform: scale(1.05);
+}
+.item-info {
+    padding: 20px;
+    line-height: 50px;
+}
+section {
+    padding: 80px;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.item-info h3 {
+    font-size: 30px;
+}
+.item-info hr {
+    margin: 10px  0 10px  0;
+    opacity: 0.5;
+}
+
+p.prix {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+section img {
+    width: 300px;
+    height: 215px;
+}
+/* menu bloquee a droite */
+.sticky {
+    position: fixed;
+    width: 450px;
+    top: 20vh;
+    right: 50px;
+    transform: translateY(100px);
+    transition: 0.4s all;
+}
+.sticky + #main {
+    padding: 20px;
+}
+.sticky  nav.menu ul {
+    flex-direction: column;
+}
+.sticky , nav.menu ul li {
+    margin: 2px;
+
+}
+
+/* pieds de page */
+ footer p {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-family: 'Aref Ruqaa Ink', serif;
+ }
